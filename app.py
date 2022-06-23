@@ -10,6 +10,9 @@ st.set_page_config(page_title = 'Streamlit Dashboard',
 ### top row 
 
 st.markdown("## Main KPIs")
+from streamlit_card import card
+
+card(title="Hello World!", text="Some description", image="http://placekitten.com/200/300")
 
 first_kpi, second_kpi, third_kpi = st.columns(3)
 
