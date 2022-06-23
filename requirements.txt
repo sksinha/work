@@ -1,1 +1,2 @@
-st-card
+streamlit
+streamlit-chat
