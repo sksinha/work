@@ -11,7 +11,7 @@ st.set_page_config(page_title = 'Streamlit Dashboard',
 
 st.markdown("## Main KPIs")
 
-first_kpi, second_kpi, third_kpi = st.beta_columns(3)
+first_kpi, second_kpi, third_kpi = st.columns(3)
 
 
 with first_kpi:
@@ -36,7 +36,7 @@ st.markdown("<hr/>", unsafe_allow_html=True)
 
 st.markdown("## Secondary KPIs")
 
-first_kpi, second_kpi, third_kpi, fourth_kpi, fifth_kpi, sixth_kpi = st.beta_columns(6)
+first_kpi, second_kpi, third_kpi, fourth_kpi, fifth_kpi, sixth_kpi =st.columns(6)
 
 
 with first_kpi:
@@ -74,7 +74,7 @@ st.markdown("<hr/>", unsafe_allow_html=True)
 
 st.markdown("## Chart Section: 1")
 
-first_chart, second_chart = st.beta_columns(2)
+first_chart, second_chart = st.columns(2)
 
 
 with first_chart:
@@ -88,7 +88,7 @@ with second_chart:
 
 st.markdown("## Chart Section: 2")
 
-first_chart, second_chart = st.beta_columns(2)
+first_chart, second_chart = st.columns(2)
 
 
 with first_chart:
