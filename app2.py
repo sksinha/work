@@ -35,4 +35,4 @@ with st.container():
             From one point of view Streamlit is a retrograde step in web development because 
             it lets you mix up the logic of your app with the way it is presented. But from 
             another it is very much simplifying web design.""")
-        st.markdown("[Read more...](https://towardsdatascience.c)"
+        st.markdown("[Read more...](https://towardsdatascience.com/rational-ui-design-with-streamlit-61619f7a6ea4)")
