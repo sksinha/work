@@ -2,3 +2,4 @@ streamlit-card
 cufflinks
 scikit-learn
 streamlit-aggrid
+hydralit_components
