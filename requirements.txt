@@ -1,3 +1,4 @@
 streamlit-card
 cufflinks
 scikit-learn
+streamlit-aggrid
