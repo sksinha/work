@@ -2,8 +2,7 @@ import streamlit as st
 st.set_page_config(page_title=" Banking  Score card g ", page_icon="🐿")
 st.title("The Central Park Squirrel Census🐿")
 st.markdown(
-    f"""The Squirrel Census website mentions a number of 2373 squirrels in Central Park, 
-    but our most recent data suggests a much larger number of {len(data)}. 
+    f"""The Squirrel Census website mentions a number of 2373 squirrels in Central Park,   but our most recent data suggests a much larger number of {len(data)}. 
     Does this mean that Central Park squirrels are doing well? """
 )
 
