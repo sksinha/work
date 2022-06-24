@@ -1,4 +1,7 @@
 import streamlit as st
+
+import pandas as pd
+data=pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2019/2019-10-29/nyc_squirrels.csv")
 st.set_page_config(page_title=" Banking  Score card g ", page_icon="🐿")
 st.title("The Central Park Squirrel Census🐿")
 col1, col2, col3 = st.columns(3)
