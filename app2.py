@@ -1,4 +1,5 @@
 import streamlit as st
+st.set_page_config(page_title=" Banking  Score card g ", page_icon="🐿")
 
 st.markdown("# Alan Jones")
 st.markdown("## Writer and Developer")
