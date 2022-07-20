@@ -60,7 +60,7 @@ with st.container():
         st.subheader("A Multi-page Interactive Dashboard with Streamlit and Plotly")
         st.write("""Beautiful interactive multipage dashboards are made easy with Streamlit
             """)
-        st.markdown("[Read more...](https://towardsdatascience.com/a-multi-page-interactive-dashboard-with-streamlit-and-plotly-c3182443871a)        
+        
      
 
 with st.container():
