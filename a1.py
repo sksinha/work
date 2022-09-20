@@ -1,6 +1,9 @@
 import streamlit as st
-with st.form(key='my_form'):
-	text_input = st.text_input(label='Enter some text')
-	submit_button = st.form_submit_button(label='Submit')
+form = st.form(key='my-form')
+name = form.text_input('Enter your name')
+submit = form.form_submit_button('Submit')
+
+st.write('Press submit to have your name printed below')
+
 if submit:
     st.write(f'hello {name}')
