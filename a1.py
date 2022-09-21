@@ -1,9 +1,10 @@
 import streamlit as st
+import datetime
 with st.form(key='my_form'):
 	text_input = st.text_input(label='Name')
 	text1_input = st.text_input(label='EMP Code')
 	text2_input = st.text_input(label='Date of Birth')
-	d = st.date_input(  "When's your birthday",  datetime.date(2019, 7, 6))
+	d = st.date_input("When's your birthday", datetime.date(2019, 7, 6))
 	text3_input = st.text_input(label='Year of retirement')
 	text4_input = st.text_input(label='Current Occupation')
 	text5_input = st.text_input(label='Intrest Area')
