@@ -14,6 +14,7 @@ with st.form(key='my_form'):
 	name = st.text_input(label='Name')
 	emp = st.text_input(label='EMP Code')
 	empcode=st.text_input(label='Emp Code')
+	email=st.text_input(label='E mail')
 	#empcode = st.text_input(label='EMP Code')
 	mobile = st.text_input(label='mobile no')
 	db= st.date_input("When's your birthday", datetime.date(2019, 7, 6))
@@ -21,3 +22,4 @@ with st.form(key='my_form'):
 	CurOption=st.selectbox('Current Occupatio', ['Retired Happy Life', 'Business','Inforation Technology', 'Social Service'], key=2)
 	InA=st.selectbox('Select Intrest Area', ['Sports', 'Politics','Inforation Technology', 'Social Service'], key=1)
 	submit_button = st.form_submit_button(label='Submit')
+	isValid(email)
