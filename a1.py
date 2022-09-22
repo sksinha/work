@@ -11,5 +11,5 @@ with st.form(key='my_form'):
 	#text4_input = st.text_input(label='Current Occupation')
 	CurOption=st.selectbox('Current Occupatio', ['Retired Happy Life', 'Business','Inforation Technology', 'Social Service'], key=2)
 	#text5_input = st.text_input(label='Intrest Area')
-	IntrestArea=st.selectbox('Select Intrest Area', ['Sports', 'Politics','Inforation Technology', 'Social Service'], key=2)
+	InA=st.selectbox('Select Intrest Area', ['Sports', 'Politics','Inforation Technology', 'Social Service'], key=1)
 	submit_button = st.form_submit_button(label='Submit')
