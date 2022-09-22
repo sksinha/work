@@ -1,6 +1,23 @@
 import streamlit as st
 import datetime
 import re
+st.set_page_config(page_title='Black Women in Romance', layout='centered')
+
+hide_menu_style = """
+        <style>
+        #MainMenu {visibility: hidden;}
+        </style>
+        """
+st.markdown(hide_menu_style, unsafe_allow_html=True)
+# get the pages on nav
+PAGES = { 
+    "How to Use": about,
+    "NICIAN": NIC Retired,
+    "Intrest Area": book_recommendation,  
+    "Artical Post": author_profiles,
+    "Add retired": intake_form
+   # "About": aboutme
+}
 
 regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
 
