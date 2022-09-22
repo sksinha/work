@@ -10,8 +10,7 @@ hide_menu_style = """
         """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 # get the pages on nav
-PAGES = { 
-    "How to Use": about,
+PAGES = { "How to Use": about,
     "Book Catalog": book_choices,
     "Book Recommendations": book_recommendation,  
     "Author Spotlight": author_profiles,
