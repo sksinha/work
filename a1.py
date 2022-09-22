@@ -11,8 +11,10 @@ def isValid(email):
       print("Invalid email")
 
 with st.form(key='my_form'):
-	text_input = st.text_input(label='Name')
-	text1_input = st.text_input(label='EMP Code')
+	name = st.text_input(label='Name')
+	emp = st.text_input(label='EMP Code')
+	empcode = st.text_input(label='EMP Code')
+	mobile = st.text_input(label='mobile no')
 	db= st.date_input("When's your birthday", datetime.date(2019, 7, 6))
 	dr= st.date_input("When's your Retirement", datetime.date(1950, 7, 6))
 	CurOption=st.selectbox('Current Occupatio', ['Retired Happy Life', 'Business','Inforation Technology', 'Social Service'], key=2)
