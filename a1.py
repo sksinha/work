@@ -14,7 +14,7 @@ PAGES = {"How to Use": about,"Book Catalog": book_choices,"Book Recommendations"
     "Author Spotlight": author_profiles,
     "Add Books or Authors": intake_form
    # "About": aboutme
-}
+        }
 
 # user interaction 
 st.sidebar.title('Navigation')
