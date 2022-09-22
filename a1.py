@@ -10,14 +10,7 @@ hide_menu_style = """
         """
 st.markdown(hide_menu_style, unsafe_allow_html=True)
 # get the pages on nav
-PAGES = { 
-    "How to Use": about,
-    "NICIAN": Retired,
-    "Intrest Area": book_recommendation,  
-    "Artical Post": author_profiles,
-    "Add retired": intake_form
-   # "About": aboutme
-}
+
 
 regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
 
