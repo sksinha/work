@@ -1,15 +1,20 @@
 import streamlit as st
 import datetime
+import re
+
+regex = re.compile(r'([A-Za-z0-9]+[.-_])*[A-Za-z0-9]+@[A-Za-z0-9-]+(\.[A-Z|a-z]{2,})+')
+
+def isValid(email):
+    if re.fullmatch(regex, email):
+      print("Valid email")
+    else:
+      print("Invalid email")
+
 with st.form(key='my_form'):
 	text_input = st.text_input(label='Name')
 	text1_input = st.text_input(label='EMP Code')
-	text2_input = st.text_input(label='Date of Birth')
-	d = st.date_input("When's your birthday", datetime.date(2019, 7, 6))
-	#text3_input = st.text_input(label='Year of retirement')
-	#d1 = st.date_input("Year of Requirement", datetime.year(1950))
-	year = st.selectbox('Year', range(1990, 2021))
-	#text4_input = st.text_input(label='Current Occupation')
+	db= st.date_input("When's your birthday", datetime.date(2019, 7, 6))
+	dr= st.date_input("When's your Retirement", datetime.date(1950, 7, 6))
 	CurOption=st.selectbox('Current Occupatio', ['Retired Happy Life', 'Business','Inforation Technology', 'Social Service'], key=2)
-	#text5_input = st.text_input(label='Intrest Area')
 	InA=st.selectbox('Select Intrest Area', ['Sports', 'Politics','Inforation Technology', 'Social Service'], key=1)
 	submit_button = st.form_submit_button(label='Submit')
