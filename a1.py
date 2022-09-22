@@ -1,7 +1,7 @@
 import streamlit as st
 import datetime
 import re
-st.set_page_config(page_title='Black Women in Romance', layout='centered')
+st.set_page_config(page_title='NIC Retired portal', layout='centered')
 
 hide_menu_style = """
         <style>
