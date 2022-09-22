@@ -13,6 +13,7 @@ def isValid(email):
 with st.form(key='my_form'):
 	name = st.text_input(label='Name')
 	emp = st.text_input(label='EMP Code')
+	empcode=st.text_input(label='Emp Code')
 	#empcode = st.text_input(label='EMP Code')
 	mobile = st.text_input(label='mobile no')
 	db= st.date_input("When's your birthday", datetime.date(2019, 7, 6))
