@@ -18,8 +18,6 @@ option = st.selectbox(
     'Select you options',
     ('About', 'View', 'Entry')
 
-
-
 with st.form(key='my_form'):
 	name = st.text_input(label='Name')
 	emp = st.text_input(label='EMP Code')
