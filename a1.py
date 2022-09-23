@@ -30,6 +30,7 @@ if submit_button == True:
         st.markdown('Submitted responses:')
 	#df = pd.DataFrame(data=d)
         st.write(d)
+	df = pd.DataFrame(data=d)
         open('df.csv', 'w').write(df.to_csv())
 else:
         st.markdown("Click submit to save form responses.")
