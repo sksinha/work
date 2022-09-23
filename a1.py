@@ -12,12 +12,6 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 # get the pages on nav
 
 
-# user interaction 
-st.sidebar.title('Navigation')
-option = st.selectbox(
-    'Select you options',
-    ('About', 'View', 'Entry')
-
 with st.form(key='my_form'):
 	name = st.text_input(label='Name')
 	emp = st.text_input(label='EMP Code')
