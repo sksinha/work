@@ -29,9 +29,6 @@ df = pd.DataFrame(data=d)
 if submit_button == True:
         st.markdown('<h3>Thank you for your feedback!</h3>', unsafe_allow_html=True)
         st.markdown('Submitted responses:')
-	#df = pd.DataFrame(data=d)
-        st.write(d)
+	st.write(d)
+	df = df.append(d, ignore_index = True)
 	open('df.csv', 'w').write(df.to_csv())
-else:
-        st.markdown("Click submit to save form responses.")
-	
