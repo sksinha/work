@@ -25,4 +25,4 @@ with st.form(key='my_form'):
 	InA=st.selectbox('Select Intrest Area', ['Sports', 'Politics','Inforation Technology', 'Social Service'], key=1)
 	submit_button = st.form_submit_button(label='Submit')
 if submit_button:
-    isValid(email)
+    print(name)
