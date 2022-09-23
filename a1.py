@@ -14,7 +14,7 @@ st.markdown(hide_menu_style, unsafe_allow_html=True)
 
 with st.form(key='my_form'):
 	name = st.text_input(label='Name')
-	emp = st.text_input(label='EMP Code')
+	des = st.text_input(label='Last Degination')
 	empcode=st.text_input(label='Emp Code')
 	email=st.text_input(label='E mail')
 	#empcode = st.text_input(label='EMP Code')
@@ -28,7 +28,7 @@ if submit_button == True:
         st.markdown('<h3>Thank you for your feedback!</h3>', unsafe_allow_html=True)
         
         st.markdown('Submitted responses:')
-	d = {‘Name’: [name],‘Emp’: [emp],‘EmpCode’: [emp],‘Email’: [email],‘Mobile’: [mobile]}
+	d = {‘Name’: [name],‘Desigination’: [des],‘EmpCode’: [empCode],‘Email’: [email],‘Mobile’: [mobile]}
 	df = pd.DataFrame(data=d)
         st.write(df)
         open('df.csv', 'w').write(df.to_csv())
