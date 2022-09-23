@@ -31,4 +31,4 @@ if submit_button == True:
         st.markdown('Submitted responses:')
 	st.write(d)
 	df = df.append(d, ignore_index = True)
-	open('df.csv', 'w').write(df.to_csv())
+	#open('df.csv', 'w').write(df.to_csv())
