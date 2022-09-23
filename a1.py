@@ -18,11 +18,7 @@ option = st.selectbox(
     'Select you options',
     ('About', 'View', 'Entry')
 
-def isValid(email):
-    if re.fullmatch(regex, email):
-      print("Valid email")
-    else:
-      print("Invalid email")
+
 
 with st.form(key='my_form'):
 	name = st.text_input(label='Name')
