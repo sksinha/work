@@ -35,3 +35,5 @@ with open('Database.csv','a', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(d)
 	
+df=pd.read_csv("Database.csv")
+write(df)
