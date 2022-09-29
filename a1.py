@@ -30,5 +30,5 @@ df = pd.DataFrame(data=d)
 if submit_button == True:
         st.markdown('<h3>Thank you for your feedback!</h3>', unsafe_allow_html=True)
         st.markdown('Submitted responses:')
-	df = df.append(d, ignore_index = True)
-	#open('df.csv', 'w').write(df.to_csv())
+df = df.append(d, ignore_index = True)
+	
