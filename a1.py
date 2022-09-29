@@ -27,7 +27,7 @@ with st.form(key='my_form'):
 	submit_button = st.form_submit_button(label='Submit')
 
 d = {'Name': [name],'Desigination': [des],'EmpCode': [empcode],'Email': [email],'Mobile': [mobile]}
-df = pd.DataFrame(data=d)
+#df = pd.DataFrame(data=d)
 if submit_button == True:
         st.markdown('<h3>Thank you for your feedback!</h3>', unsafe_allow_html=True)
         st.markdown('Submitted responses:')
