@@ -24,6 +24,7 @@ with st.form(key='my_form'):
 	CurOption=st.selectbox('Current Occupatio', ['Retired Happy Life', 'Business','Inforation Technology', 'Social Service'], key=2)
 	InA=st.selectbox('Select Intrest Area', ['Sports', 'Politics','Inforation Technology', 'Social Service'], key=1)
 	submit_button = st.form_submit_button(label='Submit')
+
 d = {'Name': [name],'Desigination': [des],'EmpCode': [empcode],'Email': [email],'Mobile': [mobile]}
 df = pd.DataFrame(data=d)
 if submit_button == True:
