@@ -1,6 +1,7 @@
 import streamlit as st
 import datetime
 import re
+import csv
 st.set_page_config(page_title='NIC Retired portal', layout='centered')
 
 hide_menu_style = """
@@ -30,5 +31,7 @@ df = pd.DataFrame(data=d)
 if submit_button == True:
         st.markdown('<h3>Thank you for your feedback!</h3>', unsafe_allow_html=True)
         st.markdown('Submitted responses:')
-df = df.append(d, ignore_index = True)
+with open('Database.csv','a', newline='') as f:
+    writer = csv.writer(f)
+    writer.writerow(d)
 	
