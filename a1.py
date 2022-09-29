@@ -31,9 +31,10 @@ d = {'Name': [name],'Desigination': [des],'EmpCode': [empcode],'Email': [email],
 if submit_button == True:
         st.markdown('<h3>Thank you for your feedback!</h3>', unsafe_allow_html=True)
         st.markdown('Submitted responses:')
-with open('Database.csv','a', newline='') as f:
+with open('data.csv','a', newline='') as f:
     writer = csv.writer(f)
     writer.writerow(d)
 	
-df=pd.read_csv("Database.csv")
-write(df)
+df = pd.read_csv('data.csv')
+
+print(df.to_string()) 
