@@ -32,7 +32,7 @@ d = {'Name': ['name'],'Desigination': ['des'],'EmpCode': ['empcode'],'Email': ['
 if submit_button == True:
         st.markdown('<h3>Thank you for your feedback!</h3>', unsafe_allow_html=True)
         st.markdown('Submitted responses:')
-	st.write(f'hello {name}')
+		st.write(f'hello {name}')
 with open('data.csv','a', newline='') as f:
 	writer = csv.writer(f)
 	writer.writerow(d)
