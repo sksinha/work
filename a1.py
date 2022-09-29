@@ -27,7 +27,7 @@ with st.form(key='my_form'):
 	InA=st.selectbox('Select Intrest Area', ['Sports', 'Politics','Inforation Technology', 'Social Service'], key=1)
 	submit_button = st.form_submit_button(label='Submit')
 
-d = {'Name': ['name'],'Desigination': [''des'],'EmpCode': ['empcode'],'Email': ['email'],'Mobile': ['mobile']}
+d = {'Name': ['name'],'Desigination': ['des'],'EmpCode': ['empcode'],'Email': ['email'],'Mobile': ['mobile']}
 #df = pd.DataFrame(data=d)
 if submit_button == True:
         st.markdown('<h3>Thank you for your feedback!</h3>', unsafe_allow_html=True)
