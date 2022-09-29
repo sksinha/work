@@ -38,4 +38,4 @@ with open('data.csv','a', newline='') as f:
 	
 df = pd.read_csv('data.csv')
 
-print(df.to_string()) 
+st.write(df)
