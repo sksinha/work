@@ -34,7 +34,7 @@ if uploaded_file is not None:
             data=selected_df,
             get_position='[Longitude, Latitude]',
             get_color='[0, 150, 200, 160]',
-            get_radius=50000,
+            get_radius=500,
             pickable=True
         )
 
