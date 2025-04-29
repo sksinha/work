@@ -8,6 +8,7 @@ st.title("Medical College Locator with Selection and Tooltips")
 data = {
     'Medical College': [
         'AIIMS New Delhi', 
+        'AIIMS New Delhi',
         'CMC Vellore', 
         'KGMU Lucknow', 
         'AFMC Pune', 
@@ -15,6 +16,7 @@ data = {
     ],
     'Latitude': [
         28.5672,
+        28.5472,
         12.9260,
         26.8643,
         18.5164,
@@ -22,6 +24,7 @@ data = {
     ],
     'Longitude': [
         77.2100,
+        77.2200,
         79.1325,
         80.9490,
         73.8567,
