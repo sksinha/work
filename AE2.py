@@ -2,70 +2,77 @@ import streamlit as st
 import pandas as pd
 import pydeck as pdk
 
-st.title("Medical College Map Viewer")
+st.title("Medical College Locator with Selection and Tooltips")
 
-# File uploader
-uploaded_file = st.file_uploader("Upload a CSV with 'Medical College', 'Latitude', and 'Longitude' columns", type="csv")
+# Sample medical college data
+data = {
+    'Medical College': [
+        'AIIMS New Delhi', 
+        'CMC Vellore', 
+        'KGMU Lucknow', 
+        'AFMC Pune', 
+        'BJMC Ahmedabad'
+    ],
+    'Latitude': [
+        28.5672,
+        12.9260,
+        26.8643,
+        18.5164,
+        23.0300
+    ],
+    'Longitude': [
+        77.2100,
+        79.1325,
+        80.9490,
+        73.8567,
+        72.5800
+    ]
+}
 
-if uploaded_file is not None:
-    # Read CSV
-    df = pd.read_csv(uploaded_file)
+# Create DataFrame
+df = pd.DataFrame(data)
 
-    # Validate required columns
-    required_cols = {'Medical College', 'Latitude', 'Longitude'}
-    if not required_cols.issubset(df.columns):
-        st.error(f"CSV must contain the following columns: {required_cols}")
-    else:
-        st.success("File uploaded successfully!")
-        
-        # Dropdown to select college
-        college_selected = st.selectbox("Select a Medical College", df['Medical College'])
+# Dropdown for college selection
+college_selected = st.selectbox("Select a Medical College", options=df['Medical College'])
 
-        # Filter the DataFrame
-        selected_df = df[df['Medical College'] == college_selected]
+# Filter to selected college
+selected_df = df[df['Medical College'] == college_selected]
 
-        # Show selected data
-        st.subheader("Selected Medical College")
-        st.dataframe(selected_df)
+# Display data
+st.subheader("Selected Medical College Data")
+st.dataframe(selected_df)
 
-        # Define Pydeck layer
-        layer = pdk.Layer(
-            "ScatterplotLayer",
-            data=selected_df,
-            get_position='[Longitude, Latitude]',
-            get_color='[0, 150, 200, 160]',
-            get_radius=50000,
-            pickable=True
-        )
+# Define Pydeck layer for the selected college
+layer = pdk.Layer(
+    "ScatterplotLayer",
+    data=selected_df,
+    get_position='[Longitude, Latitude]',
+    get_color='[0, 100, 200, 160]',
+    get_radius=50000,
+    pickable=True
+)
 
-        # Center map on selected location
-        view_state = pdk.ViewState(
-            latitude=selected_df['Latitude'].values[0],
-            longitude=selected_df['Longitude'].values[0],
-            zoom=8,
-            pitch=0
-        )
+# Set view to selected college
+view_state = pdk.ViewState(
+    latitude=selected_df['Latitude'].values[0],
+    longitude=selected_df['Longitude'].values[0],
+    zoom=8,
+    pitch=0
+)
 
-        # Tooltip
-        tooltip = {
-            "html": "<b>{Medical College}</b><br/>Lat: {Latitude}<br/>Lon: {Longitude}",
-            "style": {
-                "backgroundColor": "navy",
-                "color": "white"
-            }
-        }
+# Tooltip
+tooltip = {
+    "html": "<b>{Medical College}</b><br/>Lat: {Latitude}<br/>Lon: {Longitude}",
+    "style": {
+        "backgroundColor": "navy",
+        "color": "white"
+    }
+}
 
-        # Display map
-        st.subheader("Map View")
-        st.pydeck_chart(pdk.Deck(
-            layers=[layer],
-            initial_view_state=view_state,
-            tooltip=tooltip
-        ))
-
-else:
-    st.info("Please upload a CSV file to begin.")
-
+# Show map
+st.subheader("Map View")
+st.pydeck_chart(pdk.Deck(
+    layers=[layer],
     initial_view_state=view_state,
     tooltip=tooltip
-)
+))
