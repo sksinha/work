@@ -65,7 +65,7 @@ if uploaded_file is not None:
          height=400,  # Reduce height
          width=600    # Reduce width
         )
-                       )
+                     
 
 else:
     st.info("Please upload a CSV file to begin.")
