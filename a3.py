@@ -61,7 +61,11 @@ if uploaded_file is not None:
             layers=[layer],
             initial_view_state=view_state,
             tooltip=tooltip
-        ))
+        )
+         height=400,  # Reduce height
+         width=600    # Reduce width
+        )
+                       )
 
 else:
     st.info("Please upload a CSV file to begin.")
