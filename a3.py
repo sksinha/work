@@ -48,7 +48,7 @@ if uploaded_file is not None:
 
         # Tooltip
         tooltip = {
-            "html": "<b>{Medical College}</b><br/>Location: {location}<br/>Lat: {Latitude}<br/>Lon: {Longitude}",
+            "html": "<b>{Medical College}</b><br/>Location: {location}</br><br/ Cat : {Cat}>Lat: {Latitude}<br/>Lon: {Longitude}",
             "style": {
                 "backgroundColor": "navy",
                 "color": "white"
