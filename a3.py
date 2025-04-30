@@ -56,7 +56,7 @@ if uploaded_file is not None:
         }
 
         # Display map
-        st.subheader(lat & log  View")
+        st.subheader(" Lat & Log  View")
         st.pydeck_chart(pdk.Deck(
             layers=[layer],
             initial_view_state=view_state,
