@@ -1,16 +1,7 @@
 import streamlit as st
 import pandas as pd
 import pydeck as pdk
-hide_streamlit_style = """
-    <style>
-        #MainMenu {visibility: hidden;}
-        footer {visibility: hidden;}
-        header {visibility: hidden;}
-    </style>
-"""
-st.markdown(hide_streamlit_style, unsafe_allow_html=True)
 
-st.title("Medical College AEBAS Geo-location ")
 
 # File uploader
 uploaded_file = st.file_uploader("Upload a CSV with 'Medical College', 'Latitude', 'Longitude' columns,location,cat", type="csv")
