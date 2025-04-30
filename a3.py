@@ -5,7 +5,7 @@ import pydeck as pdk
 st.title("Medical College Map Viewer")
 
 # File uploader
-uploaded_file = st.file_uploader("Upload a CSV with 'Medical College', 'Latitude', and 'Longitude' columns", type="csv")
+uploaded_file = st.file_uploader("Upload a CSV with 'Medical College', 'Latitude', and 'Longitude' columns,location,cat", type="csv")
 
 if uploaded_file is not None:
     # Read CSV
@@ -48,7 +48,7 @@ if uploaded_file is not None:
 
         # Tooltip
         tooltip = {
-            "html": "<b>{Medical College}</b><br/>Location: {location}</br><br/ Cat : {Cat}>Lat: {Latitude}<br/>Lon: {Longitude}",
+            "html": "<b>{Medical College}</b><br/>Location: {location}</br><br/ Cat : {cat}</b><br/>>Lat: {Latitude}<br/>Lon: {Longitude}",
             "style": {
                 "backgroundColor": "navy",
                 "color": "white"
