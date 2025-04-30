@@ -48,7 +48,7 @@ if uploaded_file is not None:
 
         # Tooltip
         tooltip = {
-            "html": "<b>{Medical College}</b><br/>Location: {location}</br><br/> Cat : {cat}</b><br/>Lat: {Latitude}<br/>Lon: {Longitude}",
+            "html": "<b>{Medical College}</b><br/>Location: {location}</br> Cat : {cat}</b><br/>Lat: {Latitude}<br/>Lon: {Longitude}",
             "style": {
                 "backgroundColor": "navy",
                 "color": "white"
@@ -56,7 +56,7 @@ if uploaded_file is not None:
         }
 
         # Display map
-        st.subheader("Map View")
+        st.subheader(lat & log  View")
         st.pydeck_chart(pdk.Deck(
             layers=[layer],
             initial_view_state=view_state,
