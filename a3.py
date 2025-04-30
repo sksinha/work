@@ -2,10 +2,10 @@ import streamlit as st
 import pandas as pd
 import pydeck as pdk
 
-st.title("Medical College AEBAS LOG & Lat Viewer")
+st.title("Medical College AEBAS Geo-locatin Viewer")
 
 # File uploader
-uploaded_file = st.file_uploader("Upload a CSV with 'Medical College', 'Latitude', and 'Longitude' columns,location,cat", type="csv")
+uploaded_file = st.file_uploader("Upload a CSV with 'Medical College', 'Latitude', 'Longitude' columns,location,cat", type="csv")
 
 if uploaded_file is not None:
     # Read CSV
