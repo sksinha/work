@@ -42,7 +42,7 @@ if uploaded_file is not None:
         view_state = pdk.ViewState(
             latitude=selected_df['Latitude'].values[0],
             longitude=selected_df['Longitude'].values[0],
-            zoom=8,
+            zoom=4,
             pitch=0
         )
 
