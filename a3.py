@@ -19,7 +19,7 @@ if uploaded_file is not None:
         st.success("File uploaded successfully!")
         
         # Dropdown to select college
-        college_selected = st.selectbox("Select a Medical College", df['Medical College']..unique())
+        college_selected = st.selectbox("Select a Medical College", df['Medical College'].unique())
 
         # Filter the DataFrame
         selected_df = df[df['Medical College'] == college_selected]
