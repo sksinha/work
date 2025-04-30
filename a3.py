@@ -11,7 +11,7 @@ if uploaded_file is not None:
     df = pd.read_csv(uploaded_file)
 
     # Validate required columns
-    required_cols = {'Medical College', 'Latitude', 'Longitude',location,cat}
+    required_cols = {'Medical College', 'Latitude', 'Longitude','location','cat'}
     if not required_cols.issubset(df.columns):
         st.error(f"CSV must contain the following columns: {required_cols}")
     else:
