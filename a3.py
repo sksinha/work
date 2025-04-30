@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import pydeck as pdk
 
-st.title("Medical College AEBAS Geo-locatin Viewer")
+st.title("Medical College AEBAS Geo-location ")
 
 # File uploader
 uploaded_file = st.file_uploader("Upload a CSV with 'Medical College', 'Latitude', 'Longitude' columns,location,cat", type="csv")
