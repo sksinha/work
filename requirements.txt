@@ -3,3 +3,4 @@ cufflinks
 scikit-learn
 streamlit-aggrid
 hydralit_components
+pydeck
