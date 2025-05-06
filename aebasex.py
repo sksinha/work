@@ -4,13 +4,13 @@ import pydeck as pdk
 
 st.title("Medical College Locator with Selection and Tooltips")
 # File uploader
-#uploaded_file = st.file_uploader("Upload a exl with 'Medical College', 'Latitude', 'Longitude' columns,location,cat", type="csv")
-uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
+uploaded_file = st.file_uploader("Upload a exl with 'Medical College', 'Latitude', 'Longitude' columns,location,cat", type="csv")
+#uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
 
 if uploaded_file is not None:
     # Read CSV
     #df = pd.read_csv(uploaded_file)
-    df = pd.read_excel(uploaded_file)
+    #df = pd.read_excel(uploaded_file)
 
     # Validate required columns
     required_cols = {'Medical College', 'Latitude', 'Longitude','location','cat'}
@@ -58,11 +58,19 @@ if uploaded_file is not None:
 
         # Display map
         st.subheader(" Lat & Log  View")
-        st.pydeck_chart(pdk.Deck(
-            layers=[layer],
+       st.pydeck_chart(pdk.Deck(
+            map_style='mapbox://styles/mapbox/light-v9',
             initial_view_state=view_state,
-            tooltip=tooltip
-        ) )
+            layers=[
+                pdk.Layer(
+                    'ScatterplotLayer',
+                    data=selected_df,
+                    get_position='[Longitude, Latitude]',
+                    get_color='[255, 0, 0, 160]',
+                    get_radius=50000
+                )
+            ]
+        ))
                      
 
 else:
