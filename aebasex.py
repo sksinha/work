@@ -4,7 +4,8 @@ import pydeck as pdk
 
 st.title("Medical College Locator with Selection and Tooltips")
 # File uploader
-uploaded_file = st.file_uploader("Upload a exl with 'Medical College', 'Latitude', 'Longitude' columns,location,cat", type="csv")
+#uploaded_file = st.file_uploader("Upload a exl with 'Medical College', 'Latitude', 'Longitude' columns,location,cat", type="csv")
+uploaded_file = st.file_uploader("Upload an Excel file", type=["xlsx", "xls"])
 
 if uploaded_file is not None:
     # Read CSV
