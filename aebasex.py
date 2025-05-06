@@ -4,11 +4,12 @@ import pydeck as pdk
 
 st.title("Medical College Locator with Selection and Tooltips")
 # File uploader
-uploaded_file = st.file_uploader("Upload a CSV with 'Medical College', 'Latitude', 'Longitude' columns,location,cat", type="csv")
+uploaded_file = st.file_uploader("Upload a exl with 'Medical College', 'Latitude', 'Longitude' columns,location,cat", type="csv")
 
 if uploaded_file is not None:
     # Read CSV
-    df = pd.read_csv(uploaded_file)
+    #df = pd.read_csv(uploaded_file)
+    df = pd.read_excel(uploaded_file)
 
     # Validate required columns
     required_cols = {'Medical College', 'Latitude', 'Longitude','location','cat'}
