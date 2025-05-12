@@ -7,7 +7,7 @@ st.title("📍 Medical College Locator with Tooltips")
 # File uploader
 uploaded_file = st.file_uploader(
     "Upload a CSV file with 'Medical College', 'Latitude', 'Longitude', 'location', 'cat' columns",
-    type="csv"
+    type=["csv", "xlsx"]
 )
 
 if uploaded_file is not None:
